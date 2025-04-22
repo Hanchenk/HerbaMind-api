@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}AI助手聊天{% endblock %}
+
+{% block content %}
+<!-- 主应用界面 -->
+<div id="main-app" class="h-full flex flex-col w-full">
+  <!-- 引入顶部导航组件 -->
+  {% include "components/header.html" %}
+  
+  <!-- 引入侧边栏组件 -->
+  {% include "components/sidebar.html" %}
+  
+  <!-- 引入聊天区域组件 -->
+  {% include "components/chat.html" %}
+</div>
+{% endblock %}
+
+{% block body_scripts %}
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %} 
